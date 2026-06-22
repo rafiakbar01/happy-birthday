@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Audio -->
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Toggle Musik -->
+    <div id="music-toggle" class="music-toggle muted">🎵</div>
+
+    <!-- ===== HALAMAN AWAL (KADO) ===== -->    
+    <div id="intro" class="screen intro-screen active">
+        <!-- Petals dekorasi background -->
+        <div class="intro-bg-petals" id="intro-bg-petals"></div>
+        <!-- Partikel bintang latar -->
+        <div class="intro-stars">
+            <div class="star-dot"></div><div class="star-dot"></div><div class="star-dot"></div>
+            <div class="star-dot"></div><div class="star-dot"></div><div class="star-dot"></div>
+        </div>
+
+        <p class="intro-sub-text">Ada sesuatu untukmu...</p>
+
+        <div class="gift-container" id="gift">
+            <div class="sparkles">✨ ✨ ✨</div>
+            <div class="gift-box">
+                <div class="gift-lid">
+                    <div class="lid-bow">
+                        <div class="bow-left"></div>
+                        <div class="bow-right"></div>
+                        <div class="bow-center"></div>
+                    </div>
+                </div>
+                <div class="gift-body">
+                    <div class="ribbon-vertical"></div>
+                    <div class="ribbon-horizontal"></div>
+                    <div class="gift-heart">💕</div>
+                </div>
+            </div>
+            <p class="click-text">Klik untuk membuka 💌</p>
+        </div>
+    </div>
+
+    <!-- ===== CONTAINER SLIDE UTAMA ===== -->
+    <div id="main-slides" class="screen slides-container">
+
+        <!-- Area Klik Navigasi -->
+        <div class="nav-area nav-left" id="nav-left"></div>
+        <div class="nav-area nav-right" id="nav-right"></div>
+
+        <!-- ===== SLIDE 1 — OPENING ===== -->
+        <div class="slide slide-1 active">
+            <!-- Dekorasi melayang -->
+            <div class="floating-decor decoration-1">💖</div>
+            <div class="floating-decor decoration-2">✨</div>
+            <div class="floating-decor decoration-3">🌸</div>
+            <div class="floating-decor decoration-4">🎈</div>
+            <div class="floating-decor decoration-5">🌷</div>
+            <div class="floating-decor decoration-6">💫</div>
+
+            <!-- Lingkaran cahaya romantis di balik teks -->
+            <div class="slide1-glow"></div>
+
+            <p class="romantic-intro">Untuk seseorang yang paling berharga dalam hidupku...</p>
+            <h1 class="slide1-title">Happy Birthday 🎉</h1>
+            <div class="typewriter-container">
+                <h2 class="typewriter" id="name-typewriter"></h2>
+            </div>
+            <p class="romantic-sub">"Semesta tersenyum lebih indah hari ini,<br>karena ini adalah hari lahirmu." ✨</p>
+
+            <!-- Hati kecil naik dari bawah -->
+            <div class="slide1-hearts">
+                <span>💗</span><span>💖</span><span>💗</span><span>💕</span><span>💗</span><span>💖</span>
+            </div>
+        </div>
+
+        <!-- ===== SLIDE 2 — ALBUM FOTO ===== -->
+        <div class="slide slide-2">
+            <h2 class="gallery-title">Kenangan Indahmu 📸</h2>
+            <p class="gallery-sub">Kamu selalu cantik di setiap momen ✨</p>
+
+            <!-- Stack album - foto ditumpuk seperti kartu -->
+            <div class="album-stack" id="album-stack">
+                <div class="album-card" data-index="0">
+                    <img src="foto1.jpg" alt="Foto 1">
+                    <div class="album-caption">Senyummu itu selalu memukau ✨</div>
+                </div>
+                <div class="album-card" data-index="1">
+                    <img src="foto2.jpg" alt="Foto 2">
+                    <div class="album-caption">Ekspresimu yang bikin kangen 🌸</div>
+                </div>
+                <div class="album-card" data-index="2">
+                    <img src="foto3.jpg" alt="Foto 3">
+                    <div class="album-caption">Cantik di setiap momen 💕</div>
+                </div>
+                <div class="album-card" data-index="3">
+                    <img src="foto4.jpg" alt="Foto 4">
+                    <div class="album-caption">Senyum manismu tak bisa kulupa 💫</div>
+                </div>
+                <div class="album-card" data-index="4">
+                    <img src="foto5.jpg" alt="Foto 5">
+                    <div class="album-caption">Kamu, satu di antara jutaan ❤️</div>
+                </div>
+            </div>
+
+            <!-- Counter foto -->
+            <div class="album-counter"><span id="album-current">1</span> / <span id="album-total">5</span></div>
+        </div>
+
+        <!-- ===== SLIDE 3 — SURAT CINTA ===== -->
+        <div class="slide slide-3">
+
+            <!-- Hati naik di background -->
+            <div class="rising-hearts">
+                <div class="rising-heart">❤️</div>
+                <div class="rising-heart">💖</div>
+                <div class="rising-heart">💝</div>
+                <div class="rising-heart">💕</div>
+                <div class="rising-heart">🌸</div>
+            </div>
+
+            <!-- Amplop dekorasi di sudut -->
+            <div class="envelope-decor">
+                <div class="env-flap"></div>
+                <div class="env-body"></div>
+                <div class="env-heart">❤️</div>
+            </div>
+
+            <!-- Buku Surat Cinta -->
+            <div class="love-letter-book">
+
+                <!-- Judul surat -->
+                <div class="letter-header">
+                    <div class="letter-rose">🌹</div>
+                    <h2 class="letter-title">Untuk Kamu,</h2>
+                    <div class="letter-date">di hari istimewamu ✨</div>
+                </div>
+
+                <!-- Garis-garis surat dengan ucapan -->
+                <div class="letter-body">
+                    <div class="letter-line line-1">
+                        <span class="line-icon">🌸</span>
+                        <p>Hari ini adalah hari yang paling berharga,</p>
+                    </div>
+                    <div class="letter-line line-2">
+                        <span class="line-icon">✨</span>
+                        <p>hari di mana seseorang luar biasa hadir ke dunia ini.</p>
+                    </div>
+                    <div class="letter-line line-3">
+                        <span class="line-icon">💕</span>
+                        <p>Semoga hidupmu selalu dipenuhi tawa, cinta,</p>
+                    </div>
+                    <div class="letter-line line-4">
+                        <span class="line-icon">🌸</span>
+                        <p>dan semua hal indah yang kamu layak dapatkan.</p>
+                    </div>
+                    <div class="letter-line line-5">
+                        <span class="line-icon">💝</span>
+                        <p>Terima kasih sudah menjadi cahaya dalam hidupku.</p>
+                    </div>
+                </div>
+
+                <!-- Tanda tangan -->
+                <div class="letter-signature">
+                    <div class="sig-line"></div>
+                    <p class="sig-text">Dengan sepenuh hati,</p>
+                    <p class="sig-name">Seseorang yang selalu peduli 💞</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SLIDE 4 — PENUTUP ===== -->
+        <div class="slide slide-4">
+            <div class="balloons">
+                <div class="balloon balloon1"></div>
+                <div class="balloon balloon2"></div>
+                <div class="balloon balloon3"></div>
+                <div class="balloon balloon4"></div>
+            </div>
+            <div class="cake-container">
+                <div class="candle"><div class="flame"></div></div>
+                <div class="cake-tier tier-3"></div>
+                <div class="cake-tier tier-2"></div>
+                <div class="cake-tier tier-1"></div>
+            </div>
+            <h1 class="closing-text">Semoga semua harapanmu tercapai ❤️</h1>
+        </div>
+    </div>
+
+    <!-- Modal Zoom Gambar -->
+    <div id="image-modal" class="modal">
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
