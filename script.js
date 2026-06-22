@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(createFlower, 1000);
 
     // ===========================
-    // LEDAKAN BUNGA & HATI DARI KADO (3 detik penuh)
+    // LEDAKAN BUNGA & HATI DARI KADO (5 detik penuh)
     // ===========================
     const createGiftBurst = () => {
         const items = ['🌸', '🌺', '💮', '🌷', '❤️', '💖', '💝', '💕', '💘', '🌼', '✨', '🎀'];
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cx    = rect.left + rect.width / 2;
         const cy    = rect.top  + rect.height / 2;
 
-        // Tiga gelombang ledakan selama 3 detik
+        // Lima gelombang ledakan selama 5 detik
         const wave = (count, delay, distMultiplier) => {
             setTimeout(() => {
                 for (let i = 0; i < count; i++) {
@@ -100,7 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         wave(60, 0,    1.0);  // Gelombang 1 — segera
         wave(50, 800,  1.2);  // Gelombang 2 — setelah 0.8 detik
-        wave(60, 1800, 1.5);  // Gelombang 3 — setelah 1.8 detik, lebih jauh
+        wave(60, 1800, 1.5);  // Gelombang 3 — setelah 1.8 detik
+        wave(50, 2800, 1.3);  // Gelombang 4 — setelah 2.8 detik
+        wave(70, 3800, 1.6);  // Gelombang 5 — setelah 3.8 detik, penutup
     };
 
     // ===========================
@@ -109,12 +111,12 @@ document.addEventListener('DOMContentLoaded', () => {
     gift.addEventListener('click', () => {
         if (gift.classList.contains('open')) return; // Cegah dobel klik
         gift.classList.add('open');
-        createGiftBurst(); // Semburan meriah 3 gelombang
+        createGiftBurst(); // Semburan meriah 5 gelombang
 
         // Putar musik dari menit 2:36 — klik kado = interaksi user, pasti diizinkan browser
         startMusic();
 
-        // Tunggu 3.2 detik (biar bunga sempat memenuhi layar) baru masuk slide
+        // Tunggu 5.2 detik (biar bunga sempat memenuhi layar) baru masuk slide
         setTimeout(() => {
             introScreen.style.opacity = '0';
             setTimeout(() => {
@@ -123,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 mainSlides.classList.add('active');
                 updateSlide(0);
             }, 600);
-        }, 3200);
+        }, 5200);
     });
 
     // ===========================
